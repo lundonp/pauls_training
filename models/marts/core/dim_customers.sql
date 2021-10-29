@@ -22,6 +22,7 @@ with customers as (
         coalesce(customer_orders.number_of_orders, 0) as number_of_orders
     from customers
     left join customer_orders using (customer_id)
+    
     )
 
 select * from final
